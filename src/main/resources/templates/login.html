@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Página Login</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+	
+  <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+	
+<style type="text/css">
+table.striped>tbody>tr:nth-child(odd) {
+	background-color: rgba(158, 154, 154, 0.5);
+	margin-left: 4%;
+}
+
+form input[type=submit] {
+	color: white;
+	padding: 10 20 10 10;
+	
+}
+.row label {
+	color: #4b0000;
+	text-align: center;
+	font-style: italic;
+	font-size: 28px;
+	margin-left: 10%
+}
+
+.row {
+	
+	padding-left: 40%;
+}
+.input{
+
+ margin-left: 5%;
+ color: white;
+ width: 300px;
+ font-size: 30px;
+
+}
+
+</style> 	
+</head>
+<body style="background: #fff8ff">
+	<h1 style="text-align: center;">Acesso ao sistema</h1>
+
+
+	<form th:action="@{/login}" method="post" class="col s4">
+
+		<div class="row">
+			<div class="input-fiel col s2">
+				<label >Login</label> 
+				<input type='text' name='username' style="border-radius: 7px;">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="input-fiel col s2">
+				<label >Senha</label> 
+				<input type='password' name='password' style="border-radius: 7px;"/>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="input">
+				<input name="submit" type="submit" value="Logar" class="waves-effect waves-light btn-large"/>
+			</div>
+		</div>
+	</form>
+
+
+</body>
+</html>
